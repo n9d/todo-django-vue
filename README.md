@@ -1,11 +1,18 @@
 # docker-django-vue
 
-- docker上におけるdjango-vueのテンプレート
+- django+vueで動作するtodo
+- docker上で動作
 
 # 作成
 
 ```
 docker-compose build
+```
+
+- 適宜マイグレーションを行うこと
+
+```
+docker-compose run app python manage.py migrate
 ```
 
 # 本番相当環境
@@ -43,3 +50,4 @@ cd front && npm install && npm run serve
 - static: （clone時にはない) distに webpackより書き込まれる
 - templates: index.htmlが起点
 - front: vue.js関係
+- todo: api
